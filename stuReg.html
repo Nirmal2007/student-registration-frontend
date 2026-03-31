@@ -1,0 +1,158 @@
+<html>
+
+<head>
+    <title>25cs529</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        body {
+            
+            background-color: black;
+            font-family: Arial, sans-serif;
+            color: rgba(0, 0, 0, 0.671);
+        }
+
+        .container {
+            background-color: #c7d3c1ab;
+            width: 40%;
+            margin: auto;
+            border-radius: 5px;
+            padding: 6px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            padding: 0;
+            border: 0px solid #ddd;
+        }
+
+        td {
+            padding: 20px;
+            border: 0px solid #ddd;
+        }
+
+        input[type="text"], input[type="tel"], input[type="email"], input[type="date"], select, textarea {
+            border-radius: 3px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid #ccc;
+            width: 100%;
+        }
+
+        
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 10px;
+            }
+            table {
+                width: 100%;
+            }
+            td {
+                display: block;
+                width: 100%;
+                padding: 5px;
+            }
+            textarea {
+                width: 100%;
+                cols: auto;
+            }
+            input[type="text"], input[type="tel"], input[type="email"], input[type="date"], select {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <video autoplay loop muted plays-inline>
+        <source src="https://assets.mixkit.co/active_storage/video_items/100417/1724199603/100417-video-720.mp4"
+            type="video/mp4">
+    </video>
+    <div class="container">
+        <h1>Student Registration</h1>
+        <form>
+            <table>
+                <tr>
+                    <td>Student Name:</td>
+                    <td><input type="text" id="name" name="name"></td>
+                </tr>
+                <tr>
+                    <td>Mobile:</td>
+                    <td><input type="tel" id="mobile" name="mobile"></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><input type="email" id="email" name="email"></td>
+                </tr>
+                <tr>
+                    <td>Father's Name:</td>
+                    <td><input type="text" id="father-name" name="father-name"></td>
+                </tr>
+                <tr>
+                    <td>Mother's Name:</td>
+                    <td><input type="text" id="mother-name" name="mother-name"></td>
+                </tr>
+                <tr>
+                    <td>Select Course:</td>
+                    <td>
+                        <select id="select-course" name="select-course">
+                            <option value="python">Python</option>
+                            <option value="java">Java</option>
+                            <option value="c++">C++</option>
+                            <option value="javascript">JavaScript</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date of Birth:</td>
+                    <td><input type="date" id="dob" name="dob"></td>
+                </tr>
+                <tr>
+                    <td>Gender:</td>
+                    <td>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Select Branch:</td>
+                    <td>
+                        <input type="checkbox" id="cse" name="branch" value="cse">
+                        <label for="cse">CSE</label>
+                        <input type="checkbox" id="ece" name="branch" value="ece">
+                        <label for="ece">ECE</label>
+                        <input type="checkbox" id="mech" name="branch" value="mech">
+                        <label for="mech">MECH</label>
+                 
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">Address:</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><textarea id="address" name="address" rows="4"></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <input type="button" value="Submit">
+                    </td>
+                </tr>
+
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>
